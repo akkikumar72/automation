@@ -8,6 +8,7 @@
 -   Automated UI tests with Playwright
 -   Automated API tests with Playwright
 
+
 ## Getting Started
 
 ### Prerequisites
@@ -32,52 +33,13 @@ pnpm dev
 
 The application will be available at [http://localhost:3000](http://localhost:3000).
 
-## API Endpoints
+## Test Credentials
 
-### Authentication
+For testing purposes, use:
 
--   `POST /api/login` - Authenticate user
-    -   Request body: `{ "email": "string", "password": "string" }`
-    -   Response: `{ "success": true, "user": {...}, "token": "string" }`
+-   Email: `test@example.com`
+-   Password: `password123`
 
-### Todo Items
-
--   `GET /api/items` - Get all todos
--   `POST /api/items` - Create a new todo
-    -   Request body: `{ "title": "string" }`
--   `GET /api/items/:id` - Get a specific todo
--   `PUT /api/items/:id` - Update a todo
-    -   Request body: `{ "title": "string", "completed": boolean }`
--   `DELETE /api/items/:id` - Delete a todo
-
-## UI Automation Tests
-
-### Test Scenarios
-
-1. **Login Tests**
-
-    - Login with valid credentials
-    - Login with invalid credentials
-    - Display login form elements
-
-2. **Todo Management Tests**
-
-    - Display todo list
-    - Add new todo
-    - Toggle todo completion status
-    - Edit todo
-    - Delete todo
-
-3. **End-to-End Flow Test**
-    - Complete user journey from login to logout
-
-### Running UI Tests
-
-Run all UI tests:
-
-```bash
-pnpm playwright:test tests/login.test.ts tests/todos.test.ts tests/e2e.test.ts
-```
 
 ## API Automation Tests
 
@@ -110,14 +72,6 @@ Run all API tests:
 pnpm playwright:test tests/api/
 ```
 
-Run specific API test files:
-
-```bash
-pnpm playwright:test tests/api/login.test.ts
-pnpm playwright:test tests/api/items.test.ts
-pnpm playwright:test tests/api/workflow.test.ts
-```
-
 ## Test Reports
 
 After running tests, view the HTML report:
@@ -126,12 +80,6 @@ After running tests, view the HTML report:
 npx playwright show-report
 ```
 
-## Test Credentials
-
-For testing purposes, use:
-
--   Email: `test@example.com`
--   Password: `password123`
 
 
 ## Test Strategy
