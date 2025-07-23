@@ -1,0 +1,124 @@
+:root {
+    /* Base colors */
+    --foreground-rgb: 51, 51, 51;
+    --background-start-rgb: 252, 250, 255;
+    --background-end-rgb: 245, 241, 253;
+    
+    /* Gradient settings */
+    --gradient-angle: 180deg;
+    --gradient-stop-1: 0%;
+    --gradient-stop-2: 100%;
+    
+    /* Color palette */
+    --primary-color: 99, 49, 245;       /* Purple */
+    --primary-light: 155, 122, 255;     /* Light purple */
+    --secondary-color: 245, 241, 253;   /* Very light purple */
+    --accent-color: 75, 122, 226;       /* Blue */
+    --accent-light: 138, 173, 255;      /* Light blue */
+    --text-dark: 51, 51, 51;            /* Dark gray for text */
+    --text-light: 255, 255, 255;        /* White for text on dark bg */
+    --surface: 255, 255, 255;           /* White for cards/surfaces */
+    --muted: 226, 232, 240;             /* Light gray for muted elements */
+    --success: 34, 197, 94;             /* Green */
+    --warning: 245, 158, 11;            /* Orange */
+    --error: 239, 68, 68;               /* Red */
+}
+
+body {
+    color: rgb(var(--text-dark));
+    background: linear-gradient(
+        var(--gradient-angle),
+        rgba(var(--background-start-rgb), 1) var(--gradient-stop-1),
+        rgba(var(--background-end-rgb), 1) var(--gradient-stop-2)
+    );
+}
+
+/* Custom gradients for specific sections */
+.hero-gradient {
+    background: linear-gradient(
+        135deg,
+        rgba(var(--primary-color), 0.95) 0%,
+        rgba(var(--accent-color), 0.9) 100%
+    );
+    color: rgb(var(--text-light));
+}
+
+.card-gradient {
+    background: linear-gradient(
+        to right,
+        rgba(var(--surface), 1) 0%,
+        rgba(var(--secondary-color), 0.7) 100%
+    );
+    border: 1px solid rgba(var(--muted), 0.2);
+}
+
+.footer-gradient {
+    background: linear-gradient(
+        to top,
+        rgba(var(--background-end-rgb), 1) 0%,
+        rgba(var(--background-end-rgb), 0.6) 100%
+    );
+    border-top: 1px solid rgba(var(--muted), 0.3);
+}
+
+/* Button gradients */
+.button-gradient {
+    background: linear-gradient(
+        to right, 
+        rgba(var(--primary-color), 1),
+        rgba(var(--accent-color), 1)
+    );
+    color: rgb(var(--text-light));
+    transition: all 0.3s ease;
+}
+
+.button-gradient:hover {
+    background: linear-gradient(
+        to right, 
+        rgba(var(--primary-color), 0.9),
+        rgba(var(--accent-color), 0.9)
+    );
+    box-shadow: 0 4px 12px rgba(var(--primary-color), 0.25);
+}
+
+/* Accent borders and highlights */
+.accent-border {
+    border: 2px solid rgba(var(--accent-color), 0.5);
+}
+
+.highlight {
+    background: linear-gradient(
+        120deg,
+        rgba(var(--primary-light), 0.15) 0%,
+        rgba(var(--accent-light), 0.15) 100%
+    );
+}
+
+/* Loading state */
+.loading-gradient {
+    background: linear-gradient(
+        -45deg,
+        rgba(var(--background-start-rgb), 0.7),
+        rgba(var(--primary-light), 0.2),
+        rgba(var(--background-start-rgb), 0.7),
+        rgba(var(--accent-light), 0.2)
+    );
+    background-size: 400% 400%;
+    animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Empty state */
+.empty-state {
+    background: radial-gradient(
+        circle at center,
+        rgba(var(--background-start-rgb), 1) 0%,
+        rgba(var(--background-end-rgb), 1) 100%
+    );
+    border: 1px dashed rgba(var(--muted), 0.5);
+}
