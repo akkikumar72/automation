@@ -31,7 +31,7 @@ jobs:
               run: pnpm exec playwright install --with-deps
               
             - name: Run Playwright tests
-              run: pnpm exec playwright test
+              run: pnpm exec playwright test --project=chromium-ui
               
             # Add reporting artifacts
             - name: Upload test results

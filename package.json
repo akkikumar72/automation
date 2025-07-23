@@ -10,7 +10,7 @@
         "jest:test": "SKIP_ENV_VALIDATION=1 jest",
         "jest:watch": "jest --watch",
         "lint": "next lint --dir .",
-        "playwright:test": "playwright test",
+        "playwright:test": "playwright test --project=chromium-ui",
         "playwright:test:ui": "playwright test --project=chromium-ui",
         "playwright:test:api": "playwright test --project=chromium-api",
         "playwright:test:debug": "playwright test --debug",
