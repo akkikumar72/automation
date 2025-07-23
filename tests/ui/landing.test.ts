@@ -3,7 +3,7 @@ import { validCredentials } from '~/lib/utils';
 
 test.describe('Landing Page', () => {
     // Get test user with fallback
-    const testUser = validCredentials[0] || {
+    const testUser = validCredentials[0] ?? {
         email: 'test@example.com',
         password: 'password123',
         name: 'Test User',
@@ -44,7 +44,7 @@ test.describe('Landing Page', () => {
 
         await page.waitForTimeout(2000);
 
-        await expect(page.locator('h1', { hasText: 'Hello' })).toBeVisible();
+        await expect(page.locator('p', { hasText: 'Manage your tasks and stay productive' })).toBeVisible();
         await expect(page.getByText('My Tasks')).toBeVisible();
 
         await expect(page.getByText('Smart tasks, real progress, visible results')).not.toBeVisible();

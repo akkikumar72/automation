@@ -1,6 +1,4 @@
-# Next.js Todo App with Playwright UI and API Automation Tests
-
-This project demonstrates UI and API automation testing with Playwright for a simple Todo application built with Next.js.
+# Automation Specialist Challenge
 
 ## Features
 
@@ -135,16 +133,6 @@ For testing purposes, use:
 -   Email: `test@example.com`
 -   Password: `password123`
 
-## Project Structure
-
--   `/src/app/login` - Login page
--   `/src/app/todos` - Todo list page
--   `/src/app/todos/[id]` - Edit todo page
--   `/src/app/api/login` - Login API endpoint
--   `/src/app/api/items` - Todo items API endpoints
--   `/src/lib/store.ts` - In-memory todo store
--   `/tests` - UI tests
--   `/tests/api` - API tests
 
 ## Test Strategy
 
